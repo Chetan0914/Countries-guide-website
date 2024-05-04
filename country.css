@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    --background-color:white;
+    --text-color:black;
+    --elements-color:white;
+    background-color: var(--background-color);
+    color:var(--text-color);
+}
+        
+body.dark {
+    margin: 0px;
+    --background-color:hsl(207, 26%, 17%);
+    --text-color:white;
+    --elements-color:hsl(209, 23%, 22%);  
+}
+main{
+    padding: 30px;
+}
+a{
+    text-decoration-line: none;
+    color: inherit;
+}
+.header-container{
+    box-shadow:0px 0px 8px 0px rgba(0,0, 0, 0.2)  ;/*box-shadow: [horizontal offset] [vertical offset] [blur radius] [spread radius] [color];*/
+    padding-inline: 20px;
+    background-color: var(--elements-color);
+
+}
+.header-content{
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin-inline: auto;
+
+}
+.theme-changer{
+    cursor: pointer;
+}
+.country-details-container{
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 35px;
+}
+.back-button{
+    box-shadow:0px 4px 8px 0px rgba(0,0, 0, 0.2) ;
+    padding: 8px 24px;
+    border-radius: 8px;
+    margin-block: 32px;
+    margin-inline: 78px;
+    cursor: pointer;
+    background-color: var(--elements-color);
+}
+.country-details{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin-top: 70px;
+    margin-inline: 78px;
+}
+
+.country-details img {
+    width: 35%;
+}
+
+.details-text{
+   display: flex; 
+   flex-direction: column;
+   flex-wrap:wrap ;
+   row-gap: 10px;
+   column-gap: 100px;
+   max-height: 150px;
+}
+
+.details-text p{
+    margin: 0px;
+}
+.border-countries{
+    margin-top: 50px;
+    max-width: 500px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.border-countries a{
+    box-shadow:0px 1px 4px 0px rgba(0,0, 0, 0.2);
+    padding: 4px 18px;
+    border-radius: 4px;
+    font-size: 14px;   
+    background-color: var(--elements-color);
+
+}
+
+/*Making it responsive*/
+@media(max-width:940px){
+    .country-details{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 32px;
+        gap: 16px;
+        margin-inline: 30px;
+    }
+    .details-text{
+        max-height: unset;
+    }
+    .country-details img {
+        width: 100%;
+        max-width: 400px;
+    }
+    .title{
+        font-size: 16px;
+    }
+    .header-content p{
+        font-size: 12px;
+    }
+}
+
